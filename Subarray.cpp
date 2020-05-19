@@ -105,3 +105,53 @@ int main(){
 	
 	return 0;
 }
+
+// short and efficient code provided by Divyank Gupta
+
+#include <bits/stdc++.h>
+#define ll long long int
+
+using namespace std;
+
+int main(){
+ 
+  int t;
+  cin >> t;
+ 
+  while(t--){
+     
+  ll arrayLength,expectedSum;
+ 
+  cin >> arrayLength >> expectedSum;
+ 
+  ll array[arrayLength];
+  ll sum = 0;
+  ll first = 0 ;
+  ll last = 0;
+ 
+  for(int i=0;i<arrayLength;i++)
+       cin >> array[i];     // for the array elements
+
+
+
+while(!(sum == expectedSum || first>=arrayLength || last>=arrayLength) ){
+(sum+array[last] > expectedSum) ? (sum-=array[first],first++) : (sum+=array[last],last++);}
+sum!=expectedSum? (cout<<"-1"<<"\n"):(cout<<first+1<<" "<<last)<<"\n";
+}
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

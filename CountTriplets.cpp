@@ -15,7 +15,7 @@ int main(){
     int a[n];
     int m= 1;
 
-    map<int,int> mp;
+
 
     for(int i=0;i<n;i++)
      {
@@ -26,7 +26,9 @@ int main(){
 
      }
 
-      for(int i=0;i<m;i++)
+      int mp[m+1]={0};
+
+      for(int i=0;i<n;i++)
         mp[a[i]] = mp[a[i]] + 1;
 
 
